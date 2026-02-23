@@ -1,107 +1,190 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARVOX PANEL Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body, html{height:100%;background:#0f172a;color:white;display:flex;flex-direction:column;}
-header{background:#1e293b;color:white;padding:15px 30px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-header .logo{font-size:22px;font-weight:700;color:#3b82f6;}
-nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;transition:0.3s;}
-nav a:hover{color:#3b82f6;}
-nav a.active{color:#3b82f6;}
-.layout{flex:1;display:flex;flex-direction:column;min-height:0;}
-.main{padding:20px;flex:1;display:flex;flex-direction:column;}
-.cards-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;margin-bottom:20px;}
-.card-summary{background:#1e293b;padding:20px;border-radius:10px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
-.card-summary h3{margin-bottom:10px;font-size:20px;}
-.card-summary p{opacity:0.8;font-size:14px;}
-.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;flex:1;}
-.panel{background:#1e293b;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.3);}
-.panel h4{margin-bottom:10px;color:#3b82f6;}
-.panel p{opacity:0.8;font-size:14px;}
-.panel a{color:#3b82f6;text-decoration:none;font-weight:500;}
-.panel a:hover{text-decoration:underline;}
-footer{background:#1e293b;text-align:center;padding:15px;color:white;font-size:14px;margin-top:auto;}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  header{flex-direction:column;gap:10px;}
-  nav a{margin-left:0;display:block;margin-bottom:5px;}
-  .cards-summary{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));}
-  .panels{grid-template-columns:1fr;}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvox Panel - Manage Your Panels Effortlessly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="https://picsum.photos/seed/arvoxlogo/150/40.jpg" alt="Arvox Panel" class="logo">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#login" class="nav-link">Login/Register</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="#get-started" class="btn btn-primary">Get Started</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-<header>
-<div class="logo">ARVOX PANEL</div>
-<nav>
-<a href="#" class="active">Dashboard</a>
-<a href="#">Layanan</a>
-<a href="#">Tagihan</a>
-<a href="#">Dukungan</a>
-<a href="#">Akun Saya</a>
-</nav>
-</header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Manage Your Panels Effortlessly</h1>
+                <p class="hero-subtitle">Reliable, Secure, and Fast Panel Management for Everyone</p>
+                <div class="hero-buttons">
+                    <a href="#get-started" class="btn btn-primary">Start Free Trial</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/dashboard/600/400.jpg" alt="Dashboard Illustration">
+            </div>
+        </div>
+    </section>
 
-<div class="layout">
-<main class="main">
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to manage your panels efficiently</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Security</h3>
+                    <p class="feature-description">Advanced security measures to keep your data safe with end-to-end encryption and regular security audits.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Speed</h3>
+                    <p class="feature-description">Lightning-fast performance with optimized code and CDN integration for the best user experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">User Management</h3>
+                    <p class="feature-description">Comprehensive user management system with role-based access control and detailed permissions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Analytics</h3>
+                    <p class="feature-description">Detailed analytics and reporting tools to track performance and make data-driven decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Summary Cards -->
-<div class="cards-summary">
-<div class="card-summary">
-<h3>0</h3>
-<p>Layanan Aktif</p>
-</div>
-<div class="card-summary">
-<h3>0</h3>
-<p>Tagihan Belum Dibayar</p>
-</div>
-<div class="card-summary">
-<h3>0</h3>
-<p>Tiket Dukungan</p>
-</div>
-<div class="card-summary">
-<h3>Rp 0</h3>
-<p>Kredit Tersedia</p>
-</div>
-</div>
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">Flexible pricing options for teams of all sizes</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Basic</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">9</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 5 panels</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> 1GB storage</li>
+                        <li><i class="fas fa-times"></i> API access</li>
+                    </ul>
+                    <a href="#signup" class="btn btn-outline">Sign Up</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="pricing-title">Pro</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">19</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 20 panels</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> 10GB storage</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                    </ul>
+                    <a href="#signup" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Enterprise</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">49</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited panels</li>
+                        <li><i class="fas fa-check"></i> Custom analytics</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Unlimited storage</li>
+                        <li><i class="fas fa-check"></i> Advanced API access</li>
+                    </ul>
+                    <a href="#signup" class="btn btn-outline">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Panels -->
-<div class="panels">
-<div class="panel">
-<h4>Layanan Saya</h4>
-<p>Anda tidak memiliki layanan aktif.</p>
-<p><a href="#">Pesan Layanan Baru &gt;</a></p>
-</div>
-<div class="panel">
-<h4>Tagihan Terbaru</h4>
-<p>Anda tidak memiliki tagihan terbaru.</p>
-<p><a href="#">Lihat Semua &gt;</a></p>
-</div>
-<div class="panel">
-<h4>Dukungan Terbaru</h4>
-<p>Anda tidak memiliki tiket dukungan terbaru.</p>
-<p><a href="#">Lihat Tiket &gt;</a></p>
-</div>
-<div class="panel">
-<h4>Pengumuman</h4>
-<p>Saat ini tidak ada pengumuman yang tersedia.</p>
-<p><a href="#">Lihat Semua &gt;</a></p>
-</div>
-</div>
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://picsum.photos/seed/arvoxlogo/150/40.jpg" alt="Arvox Panel" class="logo">
+                    <p>Manage your panels effortlessly with Arvox Panel.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                        <li><a href="#terms">Terms</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Arvox Panel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-</main>
-</div>
-
-<footer>
-© 2026 ARVOX PANEL. All Rights Reserved.
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
